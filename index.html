@@ -1,57 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> ANUSHA VELIGETI | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1> ANUSHA VELIGETI </h1>
-    <p>Lets get to know a little about me!</p>
+    <h1>My Portfolio</h1>
+    <p>
+      I am an IT professional specializing in Microsoft technologies, server/network administration, virtualization, and cybersecurity.
+    </p>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <h2>Microsoft & IT Infrastructure Engineer | Hybrid AD | M365 | Azure | VMware | Networking | Security</h2>
-    <p>I’m a skilled IT professional with hands-on experience in Active Directory (Hybrid AD & Azure AD), Microsoft 365, Intune, Azure Files, and PowerShell automation. I specialize in server and network administration, working with Windows Server, VMware vSphere, Citrix, and Cisco networking (DNS, DHCP, VLANs, VPNs).
-
-With a strong cybersecurity mindset, I implement best practices in patch management, endpoint security, and IAM to ensure a secure IT environment. I also work with Fortinet firewalls, Synology NAS, and 3CX phone systems, integrating them into enterprise infrastructures.
-
-Passionate about automation, I leverage Power Automate, Power BI, and scripting to optimize IT operations. I also support MacOS, iOS, and Android devices via Intune for seamless device management.
-
-Let’s connect and collaborate on innovative IT solutions!</p>
+  <section id="experience">
+    <h2>Work Experience / Projects</h2>
+    <div class="experience-container">
+      <!-- Experience Box 1 -->
+      <div class="experience-box" onclick="toggleContent(this)">
+        <h3>Project 1</h3>
+        <div class="content">
+          <p>
+            • Managed Active Directory &amp; Azure AD integrations<br>
+            • Automated Microsoft 365 &amp; Intune administration using PowerShell<br>
+            • Configured VMware vSphere &amp; Citrix environments for high availability
+          </p>
+        </div>
+      </div>
+      <!-- Experience Box 2 -->
+      <div class="experience-box" onclick="toggleContent(this)">
+        <h3>Project 2</h3>
+        <div class="content">
+          <p>
+            • Administered Cisco networking and Fortinet firewall solutions<br>
+            • Implemented cybersecurity best practices including patch management and endpoint protection<br>
+            • Supported MacOS, iOS, and Android devices via Intune
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="projects">
-    <h2>Work Experience</h2>
-    <article>
-      <h3>Preferred Home Care of New York, Brooklyn NY</h3>
-      <p>System Engineer (July 2024- Present)</p>
-    </article>
-    <article>
-      <h3>Mosaic Life Care, St Joseph MO</h3>
-      <p>Network and Cybersecurity Intern (June 2023- December 2023)</p>
-    </article>
-    <!-- Add more projects as needed -->
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Anusha Veligeti</p>
-  </footer>
+  <script>
+    // Toggle the visibility of the content within a box on click
+    function toggleContent(box) {
+      const content = box.querySelector(".content");
+      content.classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
+
