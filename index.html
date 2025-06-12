@@ -56,7 +56,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fabrizio Tonello – Authory</title>
+  <meta name="description" content="Anusha Veligeti – Hybrid AD, M365 & Cloud Migration Specialist Portfolio">
+  <title>Anusha Veligeti – Portfolio</title>
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <!-- Your CSS -->
@@ -64,65 +65,91 @@
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <section class="hero">
+  <!-- Hero / Header -->
+  <header class="hero">
     <img src="images/authory-logo.svg" alt="Authory Logo" class="authory-logo" />
-    <img src="images/profile.jpg" alt="Fabrizio Tonello" class="profile-pic" />
-    <h1>Fabrizio Tonello</h1>
-    <p class="subtitle">
-      Fabrizio Tonello is a Professor of political science, University of Padua. 
-      <a href="#">Read more</a>
-    </p>
+    <img src="images/profile.jpg" alt="Anusha Veligeti" class="profile-pic" />
+    <h1>Anusha Veligeti</h1>
+    <p class="subtitle">I talk to servers—and usually they listen.</p>
     <div class="social-icons">
-      <a href="#"><img src="images/twitter.svg" alt="Twitter" /></a>
-      <a href="#"><img src="images/link.svg" alt="Website" /></a>
+      <a href="https://linkedin.com/in/your-profile" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="" /></a>
+      <a href="mailto:you@example.com" aria-label="Email"><img src="images/mail.svg" alt="" /></a>
     </div>
-  </section>
+  </header>
 
-  <!-- Tabs -->
-  <nav class="tabs">
-    <div class="tab active">All Content</div>
-    <div class="tab">Stati Uniti – gli anni di Trump</div>
+  <!-- Navigation Tabs -->
+  <nav class="tabs" role="tablist">
+    <button class="tab active" role="tab" aria-controls="home">Home</button>
+    <button class="tab" role="tab" aria-controls="story">My Story</button>
+    <button class="tab" role="tab" aria-controls="contact">Contact Me</button>
   </nav>
 
-  <!-- Filters / Search Bar -->
-  <div class="filters">
-    <div class="search">
-      <input type="text" placeholder="Search All Content" />
-    </div>
-    <select>
-      <option>PDFs</option>
-      <option>Articles</option>
-      <option>Videos</option>
-    </select>
-    <select>
-      <option>All Time</option>
-      <option>Past Year</option>
-      <option>Past Month</option>
-    </select>
-    <select>
-      <option>All Sources</option>
-      <option>Authory</option>
-      <option>External</option>
-    </select>
-  </div>
+  <!-- Main Content -->
+  <main>
 
-  <!-- Content Card -->
-  <article class="pdf-item">
-    <div class="info">
-      <h2>HOW AMERICAN DEMOCRACY IS QUICKLY SLIPPING AWAY</h2>
-      <p class="meta">
-        Michigan Quarterly Review, Issue 61:4, Fall 2022. Special Issue: FRACTURED UNION. American Democracy on the Brink...
+    <section id="home" class="tab-content active" role="tabpanel">
+      <h2>About Me</h2>
+      <p>
+        With <strong>2 years’ experience</strong> in <strong>Hybrid Active Directory</strong>, 
+        <strong>Microsoft 365</strong>, and <strong>Cloud Migrations</strong>, I build reliable, secure, 
+        and automated IT environments that keep businesses running smoothly.
       </p>
-      <p class="meta">
-        October 08, 2022 · PDF at Fabrizio on Authory
-      </p>
-    </div>
-    <img src="images/pdf-thumbnail.jpg" alt="PDF thumbnail" class="thumbnail" />
-  </article>
+    </section>
 
-  <!-- Subscribe Button -->
-  <button class="subscribe-btn">Subscribe</button>
+    <section id="story" class="tab-content" role="tabpanel" hidden>
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>EPIC EHR Integration:</strong> Implemented EPIC EHR with Microsoft 365 & Azure, 
+            optimizing clinical workflows and boosting operational efficiency.</li>
+        <li><strong>Hybrid Infrastructure:</strong> Deployed VMware & M365 solutions for seamless 
+            on-prem and cloud scalability.</li>
+        <li><strong>Security & Compliance:</strong> Rolled out Defender for Office 365, Azure AD Conditional Access, 
+            and Intune to ensure full HIPAA adherence.</li>
+        <li><strong>Automation:</strong> Streamlined M365 administration with PowerShell & Ansible for user 
+            provisioning, security policies, and compliance.</li>
+        <li><strong>System Upgrades:</strong> Coordinated M365, Azure, and VMware upgrades with zero downtime 
+            and thorough documentation.</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="tab-content" role="tabpanel" hidden>
+      <h2>Contact Me</h2>
+      <form action="#" method="POST">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Floating Subscribe Button (optional) -->
+  <button class="subscribe-btn" aria-label="Subscribe">Subscribe</button>
+
+  <!-- (Optional) Simple tab-switching script: -->
+  <script>
+    document.querySelectorAll('.tabs .tab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // deactivate all tabs & panels
+        document.querySelectorAll('.tabs .tab, .tab-content').forEach(el => {
+          el.classList.remove('active');
+          if (el.matches('.tab-content')) el.hidden = true;
+        });
+        // activate clicked tab + its panel
+        btn.classList.add('active');
+        const panel = document.getElementById(btn.getAttribute('aria-controls'));
+        panel.classList.add('active');
+        panel.hidden = false;
+      });
+    });
+  </script>
 
 </body>
 </html>
