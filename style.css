@@ -1,6 +1,8 @@
+
 /* styles.css - Modern Hero Portfolio Styles */
 
 /* Reset & Base */
+/*
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -19,6 +21,7 @@ a {
 }
 
 /* Navigation */
+/*
 .nav-container {
   position: absolute;
   top: 0;
@@ -51,6 +54,7 @@ nav ul li a:hover {
 }
 
 /* Hero Section */
+/*
 .hero {
   position: relative;
   width: 100%;
@@ -59,6 +63,7 @@ nav ul li a:hover {
   background: url('babckground.jpg') center/cover no-repeat;
   display: flex; 
  /* background: rgba(0, 0, 0, 0.5); */
+/*
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -93,6 +98,7 @@ nav ul li a:hover {
 }
 
 /* Content Sections */
+/*
 section {
   background: #fff;
   border-radius: 8px;
@@ -105,6 +111,7 @@ section {
 }
 
 /* First section overlap */
+/*
 #about {
   margin-top: -4rem;
 }
@@ -131,10 +138,195 @@ section li {
 }
 
 /* Footer */
+/*
 footer {
   text-align: center;
   padding: 1rem 0;
   background: #333;
   color: #fff;
   font-size: 0.875rem;
+}
+*/
+
+/* style.css */
+
+/* 1. Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/* 2. Hero Section */
+.hero {
+  position: relative;
+  background: url('babcground.jpg') no-repeat center center / cover;
+  text-align: center;
+  color: #fff;
+  padding: 80px 20px 120px; /* extra bottom to overlap content card */
+}
+
+.hero .authory-logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  opacity: 0.8;
+}
+
+.hero .profile-pic {
+  width: 120px;
+  height: 120px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.hero p.subtitle {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.hero .social-icons {
+  margin-top: 20px;
+}
+
+.hero .social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: opacity 0.2s ease;
+}
+
+.hero .social-icons a:hover {
+  opacity: 0.7;
+}
+
+/* 3. Tabs Bar */
+.tabs {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 0 20px;
+}
+
+.tabs .tab {
+  padding: 16px 24px;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.tabs .tab.active {
+  color: #007bff;
+  border-color: #007bff;
+}
+
+/* 4. Filters/Search Bar */
+.filters {
+  position: relative;
+  top: -30px; /* pull up to overlap hero bottom */
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 24px;
+  margin: 0 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.filters .search {
+  flex: 1 1 280px;
+  max-width: 360px;
+}
+
+.filters .search input {
+  width: 100%;
+  padding: 10px 16px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 1rem;
+}
+
+.filters select {
+  padding: 10px 16px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 1rem;
+  appearance: none;
+  background: white url('images/chevron-down.svg') no-repeat calc(100% - 12px) center;
+  background-size: 12px;
+}
+
+/* 5. Content Cards */
+.pdf-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #fff;
+  max-width: 840px;
+  margin: 24px auto;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.pdf-item .info {
+  flex: 1;
+}
+
+.pdf-item .info h2 {
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.pdf-item .info .meta {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.pdf-item .thumbnail {
+  width: 120px;
+  height: auto;
+  margin-left: 20px;
+  object-fit: contain;
+}
+
+/* 6. Floating Subscribe Button */
+.subscribe-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.subscribe-btn:hover {
+  opacity: 0.85;
 }
