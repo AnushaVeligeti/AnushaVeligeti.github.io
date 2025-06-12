@@ -54,10 +54,11 @@ nav ul li a:hover {
 .hero {
   position: relative;
   width: 100vw;
-  height: 56.25vh;
+  height: 42.18vh;
   min-height: 225px;
-  background: url('babckground.jpg') center/cover no-repeat;
-  display: flex;
+/*   background: url('babckground.jpg') center/cover no-repeat;
+  display: flex; */
+  background: rgba(0, 0, 0, 0.5);
   align-items: center;
   justify-content: center;
   text-align: center;
